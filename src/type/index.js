@@ -17,7 +17,7 @@ var person = {
 console.log(person.name);
 // 配列型
 var fruits = ['apple', 'banana', 'cherry'];
-// タプル型
+// タプル型 固定長の配列を指定できる
 var book = ['book', 10, true];
 // 列挙型(特定のまとまったグループのみを指定できる)
 var CoffeeSize;
@@ -33,3 +33,19 @@ var coffee = {
 };
 coffee.size = CoffeeSize.TALL;
 console.log(coffee.size);
+// any型
+var anything = 'Hello';
+anything = 10;
+anything = {};
+anything.fijiti = 'fijiti';
+// union型 複数の型を指定できる
+var unionType = 10;
+var unionType2 = [10, 'hello', 11]; // 配列の場合は()の中に入れ、その後に[]を使う
+// literal型 特定の値を指定できる
+var apple = 'apple';
+var literalType = 'large'; // ここではlarge、medium、smallのみを指定できる
+var cloth = {
+    color: 'red',
+    size: 'medium',
+};
+var clothSize = 'medium';

@@ -24,7 +24,7 @@ console.log(person.name);
 // 配列型
 const fruits: string[] = ['apple', 'banana', 'cherry'];
 
-// タプル型
+// タプル型 固定長の配列を指定できる
 const book: [string, number, boolean] = ['book', 10, true];
 
 // 列挙型(特定のまとまったグループのみを指定できる)
@@ -48,3 +48,32 @@ let anything: any = 'Hello';
 anything = 10;
 anything = {};
 anything.fijiti = 'fijiti';
+
+// union型 複数の型を指定できる
+let unionType: number | string = 10;
+let unionType2: (number | string)[] = [10, 'hello', 11]; // 配列の場合は()の中に入れ、その後に[]を使う
+
+// literal型 特定の値を指定できる
+let apple: 'apple' = 'apple';
+let literalType: 'large' | 'medium' | 'small' = 'large'; // ここではlarge、medium、smallのみを指定できる
+const cloth: { color: string; size: 'large' | 'medium' | 'small' } = {
+  color: 'red',
+  size: 'medium',
+}
+
+// typeエイリアス
+type ClothSize = 'large' | 'medium' | 'small';
+let clothSize: ClothSize = 'medium';
+
+// 関数
+// 引数の型と返り値の型を指定できる
+function add(num1: number, num2: number): number {
+  return num1 + num2;
+}
+
+add(1, 2);
+
+// void型 何も返さない関数
+function sayHello(): void {
+  console.log('Hello');
+}
