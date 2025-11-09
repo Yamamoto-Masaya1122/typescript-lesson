@@ -77,3 +77,11 @@ add(1, 2);
 function sayHello(): void {
   console.log('Hello');
 }
+
+const anotherAdd: (num1: number, num2: number) => number = add;
+anotherAdd(1, 2);
+
+const anotherMul: (num1: number, num2: number) => number = (num1, num2) => num1 * num2;
+anotherMul(3, 4);
+
+let subject: string = 'math';
