@@ -40,5 +40,14 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": [
+    "*/index.ts"
+  ],
+  "exclude": [
+    "**/compiler.ts",
+  ],
+  "files": [
+    "tmp/compiler.ts"
+  ]
 }
